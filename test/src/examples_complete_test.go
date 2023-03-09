@@ -3,6 +3,7 @@ package test
 import (
 	"github.com/gruntwork-io/terratest/modules/terraform"
 	"testing"
+	"os"
 )
 
 // TestExamplesComplete tests a typical deployment of this module
