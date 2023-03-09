@@ -11,7 +11,10 @@ func TestExamplesComplete(t *testing.T) {
 
 	terraformOptions := &terraform.Options{
 		TerraformDir:  "../../examples/complete",
-		BackendConfig: map[string]interface{}{},
+		BackendConfig: map[string]interface{}{
+			"bucket": os.Getenv("TF_STATE_BUCKET"),
+			"key":    os.Getenv("TF_VAR_git"),
+		},
 		EnvVars:       map[string]string{},
 		Vars:          map[string]interface{}{},
 	}
