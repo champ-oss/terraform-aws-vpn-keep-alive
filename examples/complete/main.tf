@@ -32,6 +32,7 @@ module "this" {
   git                = "terraform-aws-vpn-keep-alive"
   host               = "github.com"
   interval_minutes   = 1
+  name               = "test"
   port               = 80
   private_subnet_ids = data.aws_subnets.this.ids
   retention_in_days  = 7

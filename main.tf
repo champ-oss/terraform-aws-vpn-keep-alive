@@ -21,7 +21,7 @@ module "this" {
   git                 = var.git
   handler             = "vpn_keep_alive.handler"
   memory_size         = var.memory_size
-  name                = var.name != null ? var.name : "vpn-keep-alive-${var.host}"
+  name                = var.name != null ? var.name : "vpn-keep-alive"
   private_subnet_ids  = var.private_subnet_ids
   retention_in_days   = var.retention_in_days
   runtime             = "python3.9"
