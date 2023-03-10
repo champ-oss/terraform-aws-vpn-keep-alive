@@ -7,7 +7,7 @@ PORT = int(os.getenv('PORT', '80'))
 TIMEOUT = int(os.getenv('TIMEOUT', '3'))
 
 
-def handler(_, __):
+def handler(_, __) -> None:
     print(f'connecting to {HOST}:{PORT}')
     with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as sock:
         sock.settimeout(TIMEOUT)
