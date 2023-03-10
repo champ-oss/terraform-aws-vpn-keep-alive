@@ -16,7 +16,7 @@ class Test(TestCase):
             os.environ['PORT'] = str(sock.getsockname()[1])
             os.environ['TIMEOUT'] = '1'
             import vpn_keep_alive
-            assert (None, vpn_keep_alive.handler(None, None))
+            assert vpn_keep_alive.handler(None, None) is None
 
     def test_handler_failed_connection(self) -> None:
         """
