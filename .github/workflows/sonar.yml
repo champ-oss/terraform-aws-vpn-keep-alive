@@ -49,5 +49,5 @@ jobs:
             -Dsonar.organization=${{ env.SONAR_ORG }}
             -Dsonar.projectKey=${{ env.sonarProject }}_${{ env.SONAR_ORG }}
             -Dsonar.branch.name=${{ env.currentBranch }}
-            -Dsonar.exclusions=**/*_test.go
-            -Dsonar.test.inclusions=**/*_test.go
+            -Dsonar.exclusions=**/*_test.go,**/test_*.py
+            -Dsonar.test.inclusions=**/*_test.go,**/test_*.py
