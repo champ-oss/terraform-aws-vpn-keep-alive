@@ -47,6 +47,7 @@ func TestExamplesComplete(t *testing.T) {
 	foundResponse := false
 	for _, message := range outputLogs {
 		if strings.Contains(*message.Message, expectedResponse) {
+			logger.Log(t, "found expected log message")
 			foundResponse = true
 			break
 		}
