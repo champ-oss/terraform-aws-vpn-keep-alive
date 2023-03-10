@@ -14,7 +14,3 @@ def handler(_, __) -> None:
         sock.connect((HOST, PORT))
         print('connected successfully')
         sock.close()
-
-
-if __name__ == '__main__':
-    handler(None, None)
