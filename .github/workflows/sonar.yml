@@ -18,14 +18,7 @@ jobs:
         with:
           # Disabling shallow clone is recommended for improving relevancy of reporting
           fetch-depth: 0
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.9
-      - name: Install tox and any other packages
-        run: pip install tox
-      - name: Run tox
-        run: tox -e py
+
       - name: Create project
         shell: bash
         run: | # check if project exist, create project in sonar cloud org.  rename default master branch to main via rest api
@@ -49,5 +42,5 @@ jobs:
             -Dsonar.organization=${{ env.SONAR_ORG }}
             -Dsonar.projectKey=${{ env.sonarProject }}_${{ env.SONAR_ORG }}
             -Dsonar.branch.name=${{ env.currentBranch }}
-            -Dsonar.exclusions=**/*_test.go,**/test_*.py
-            -Dsonar.test.inclusions=**/*_test.go,**/test_*.py
+            -Dsonar.exclusions=**/*_test.go
+            -Dsonar.test.inclusions=**/*_test.go
