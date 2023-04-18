@@ -26,3 +26,6 @@ jobs:
             .github/workflows/lint.yml
             .github/workflows/module.yml
             .github/workflows/release.yml
+            .github/workflows/sonar.yml
+            .github/workflows/sync.yml
+            .github/workflows/combine-prs.yml
