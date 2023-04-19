@@ -3,9 +3,9 @@ module github.com/champ-oss/terraform-module-template
 go 1.17
 
 require (
-	github.com/aws/aws-sdk-go v1.44.122
+	github.com/aws/aws-sdk-go v1.44.245
 	github.com/gruntwork-io/terratest v0.41.17
-	github.com/stretchr/testify v1.8.1
+	github.com/stretchr/testify v1.8.2
 )
 
 require (
