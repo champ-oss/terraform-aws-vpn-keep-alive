@@ -13,7 +13,7 @@ data "archive_file" "this" {
 }
 
 module "this" {
-  source              = "github.com/champ-oss/terraform-aws-lambda.git?ref=v1.0.115-77403a9"
+  source              = "github.com/champ-oss/terraform-aws-lambda.git?ref=v1.0.121-73d2ca1"
   enable_cw_event     = var.enable
   enable_function_url = false
   enable_vpc          = var.vpc_id != null ? true : false
