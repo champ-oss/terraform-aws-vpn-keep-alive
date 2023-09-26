@@ -1,13 +1,3 @@
-terraform {
-  backend "s3" {}
-}
-
-provider "aws" {
-  region = "us-east-2"
-}
-
-data "aws_region" "current" {}
-
 data "aws_vpcs" "this" {
   tags = {
     purpose = "vega"
@@ -38,4 +28,9 @@ module "this" {
   retention_in_days  = 7
   timeout            = 1
   vpc_id             = data.aws_vpcs.this.ids[0]
+}
+
+output "cloudwatch_log_group" {
+  description = "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group"
+  value       = module.this.cloudwatch_log_group
 }
