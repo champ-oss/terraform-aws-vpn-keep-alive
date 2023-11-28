@@ -64,5 +64,4 @@ variable "timeout" {
 variable "vpc_id" {
   description = "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_target_group#vpc_id"
   type        = string
-  default     = null
 }
