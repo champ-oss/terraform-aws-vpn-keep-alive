@@ -16,7 +16,7 @@ module "this" {
   source              = "github.com/champ-oss/terraform-aws-lambda.git?ref=v1.0.133-c385eba"
   enable_cw_event     = var.enable
   enable_function_url = false
-  enable_vpc          = var.vpc_id != null ? true : false
+  enable_vpc          = true
   filename            = data.archive_file.this.output_path
   git                 = var.git
   handler             = "vpn_keep_alive.handler"
